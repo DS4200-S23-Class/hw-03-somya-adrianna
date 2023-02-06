@@ -8,13 +8,159 @@
 
   <body>
     <h1 class="centered">hw-03: Interactive Webpage, and Marks & Channels</h1>
-    <div class="row">
-      <div class="column">
+    <div class="flex-grid-halves">
+      <div class="col">
         <img src="./img/vis1.png" />
+      </div>
+      <div class="col">
+        <h2>Mark</h2>
+        <ul>
+          <li>
+            Areas: each piece of data refers to one of the 50 states on the map,
+            an area, and what they would look like in 2016 if just women voted.
+          </li>
+          <li>
+            Lines: the line bar above the map uses a line mark to show the
+            distribution of votes between Clinton and Trump.
+          </li>
+        </ul>
+        <h2>Channel</h2>
+        <ul>
+          <li>
+            Color: color is used here to represent the two political parties.
+            Blue shows the states and number of people that voted for Clinton,
+            red shows the states and number of people who voted for Trump, and
+            the one state with red and blue shows a 50-50 split.
+            <ul>
+              <li>
+                Attribute: the colors here represent candidates of opposing
+                parties, a categorical attribute. This is a good choice because
+                the same colors are used in the real world to represent the same
+                thing — red for the Republican party and blue for the Democratic
+                party. This makes the data easy to understand.
+              </li>
+            </ul>
+          </li>
+          <li>
+            Length: along with color, length is used in the line bar to show
+            that way more women voted blue than red in 2016.
+            <ul>
+              <li>
+                Attribute: the length here represents the counted of people that
+                voted a certain way, a quantitative attribute. This is a good
+                choice because we associate longer lengths with a larger amount,
+                so this data is easy to interpret and read.
+              </li>
+            </ul>
+          </li>
+          <li>
+            Shape: the shape of each state helps the user distinguish between
+            different states, which are different data points.
+            <ul>
+              <li>
+                Attribute: the border of each area represents a specific state.
+                This is a good choice because the shape is the most commonly
+                used channel to distinguish between different states or
+                countries on maps, and is easily recognizable.
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <h2>Colormap</h2>
+        <ul>
+          <li>
+            Categorical colormap: there are only two colors used in this
+            visualization, and they clearly represent two different categories.
+            The two hues are red and blue, and they have the same saturation and
+            are very different from each other.
+            <ul>
+              <li>
+                Attribute: like the color channel, this colormap represents
+                candidates of opposing parties which is a categorical attribute.
+                The red represents a Republican candidate, Trump, and the blue
+                represents a Democratic candidate, Clinton. This is a good
+                choice because it makes it clear that the data wants to show two
+                different categories.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="flex-grid-halves">
+      <div class="col">
         <img src="./img/vis2.png" />
       </div>
+      <div class="col">
+        <h2>Mark</h2>
+        <ul>
+          <li>
+            Points: small dots are used here to represent the score of batted
+            balls based on the exit velocity and the launch angle.
+          </li>
+        </ul>
+        <h2>Channel</h2>
+        <ul>
+          <li>
+            Position: in this visualization, both horizontal and vertical
+            positions are used. It shows the effect that exit velocity and
+            launch angle have on scoring value.
+            <ul>
+              <li>
+                Attribute: the x-axis represents exit velocity which is a
+                quantiative attribute. This is a good choice because it relates
+                to how humans perceive speed and distance. When the velocity is
+                higher, the ball will tend to travel farther, which makes sense
+                with this graph as well, since a higher velocity is further away
+                on the x-axis.
+              </li>
+              <li>
+                Attribute: the y-axis represents launch angle, which is a
+                divergent attribute. This is a good choice for a similar reason
+                to the x-axis attribute, as balls launched with a larger angle
+                go higher into the air, while balls launched with a lower angle
+                will go to the ground.
+              </li>
+            </ul>
+          </li>
+          <li>
+            Color: color is used here to represent whether the scores are below
+            average, above average, or just average.
+            <ul>
+              <li>
+                Attribute: the colors here represent scoring value, a
+                quantitative attribute. I think this is a good choice, because
+                there are three distinct colors for three distinct sections:
+                below average, average, and above average. Within those
+                sections, the colors also vary by saturation, where higher
+                scores are darker and lower scores are lighter. However, one
+                thing I would change is using white is the middle-point color.
+                It would be better to use something more readable.
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <h2>Colormap</h2>
+        <ul>
+          <li>
+            Divergent colormap: there are two extremes here, the lowest score
+            for below average which is the darkest purple, and the highest score
+            for above average which is the darkest orange. In between those
+            values, the saturation gets lighter starting from the left until it
+            reaches the midpoint, and then the saturation gets darker further to
+            the right.
 
-      <div class="column">column</div>
+            <ul>
+              <li>
+                Attribute: like the color channel, the divergent colormap
+                represents scoring value which is a quantitative attribute. This
+                is a good choice because it clearly shows how there is a range
+                of scores and clearly communicates an order within the data.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
     </div>
 
     <!-- citing our sources -->
@@ -29,6 +175,7 @@
         <li>https://www.w3schools.com/graphics/svg_circle.asp</li>
         <li>https://www.w3schools.com/cssref/sel_hover.php</li>
         <li>https://css-tricks.com/snippets/css/a-guide-to-flexbox/</li>
+        <li>https://css-tricks.com/dont-overthink-flexbox-grids/</li>
       </ul>
     </div>
   </body>

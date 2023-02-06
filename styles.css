@@ -8,10 +8,18 @@ body {
   margin-right: auto;
 }
 
-.row {
-  display: flex;
+.col {
+  padding: 20px;
 }
 
-.column {
-  flex: 50%;
+.row {
+  display: grid;
+}
+
+.flex-grid-halves {
+  display: flex;
+  justify-content: space-between;
+}
+.flex-grid-halves .col {
+  width: 50%;
 }
