@@ -8,12 +8,22 @@
 
   <body>
     <h1 class="centered">hw-03: Interactive Webpage, and Marks & Channels</h1>
+
+    <!-- button that does something with js -->
+    <div class="centered">
+      Click on the button!
+      <br />
+      <button type="button" id="button" onClick="clickHandler()">Button</button>
+    </div>
+
+    <!-- visualizations and analysis of marks, channels, and colormaps -->
+    <!-- vis1 -->
     <div class="flex-grid-halves">
       <div class="col">
         <img src="./img/vis1.png" />
       </div>
       <div class="col">
-        <h2>Mark</h2>
+        <h2>Marks</h2>
         <ul>
           <li>
             Areas: each piece of data refers to one of the 50 states on the map,
@@ -29,7 +39,7 @@
             represents a candidate that was elected.
           </li>
         </ul>
-        <h2>Channel</h2>
+        <h2>Channels</h2>
         <ul>
           <li>
             Color: color is used here to represent the two political parties.
@@ -94,6 +104,8 @@
         </ul>
       </div>
     </div>
+
+    <!-- vis2 -->
     <div class="flex-grid-halves">
       <div class="col">
         <img src="./img/vis2.png" />
@@ -106,7 +118,7 @@
             balls based on the exit velocity and the launch angle.
           </li>
         </ul>
-        <h2>Channel</h2>
+        <h2>Channels</h2>
         <ul>
           <li>
             Position: in this visualization, both horizontal and vertical
@@ -156,7 +168,6 @@
             values, the saturation gets lighter starting from the left until it
             reaches the midpoint, and then the saturation gets darker further to
             the right.
-
             <ul>
               <li>
                 Attribute: like the color channel, the divergent colormap
@@ -166,6 +177,93 @@
               </li>
             </ul>
           </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- vis3 -->
+    <div class="flex-grid-halves">
+      <div class="col">
+        <h3>
+          Comparing the order sizes of customers divided into four different
+          segments based on demographic data. The x-axis shows income in
+          Brazilian currency, and the y-axis represents the food order size by
+          <br />
+          using the cost of the order in Brazilian currency.
+        </h3>
+        <img src="./img/vis3.png" width="86%" />
+      </div>
+      <div class="col">
+        <h2>Marks</h2>
+        <ul>
+          <li>
+            Points: the graph uses dots to represent the customers of the food
+            ordering app.
+          </li>
+          <li>
+            Lines: we used a line mark to show a line of best fit, to better
+            understand the trend of the data.
+          </li>
+        </ul>
+        <h2>Channels</h2>
+        <ul>
+          <li>
+            Position: the graph has an x-axis and a y-axis. The x-axis
+            represents the income in Brazilian currency, and the y-axis
+            represents the food order size, but we show this using the cost of
+            the order.
+            <ul>
+              <li>
+                Attribute: the x-axis represents income in Brazilian currency,
+                which is a quantitative attribute. This is a good choice,
+                because as we go further to the right, the price increases. In
+                addition, combined with the color, we can easily see where each
+                new segment of people begins as the income increases to the
+                right.
+              </li>
+              <li>
+                Attribute: the y-axis represents food order size in terms of the
+                cost of the order, which is also a quantiative attribute. This
+                is a good choice because as we go furhter up the axis, the price
+                increases, which also aligns with common sense. We decided to
+                use price here to stay consistent with the x-axis unit. It's
+                also hard to quantify food order size, as someone could order 4
+                really small items while another person orders 1 large item. So,
+                this was a good way to make everything uniform.
+              </li>
+            </ul>
+          </li>
+          <li>
+            Color: color is used here to show which of the four different
+            segments each person belongs to. The segments were chosen based on
+            income.
+            <ul>
+              <li>
+                Attribute: color is used here to represent four different groups
+                of people, which is a categorical attribute. This is a good
+                choice because it's clear that each color represents something
+                different. The color of the line is also very different from the
+                four segments, which makes the graph more readable.
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <h2>Colormap</h2>
+        <ul>
+          <li>
+            Categorical colormap: there are four colors being used here, and
+            each one is very distinct. The colors are all around the same
+            saturation, so it's clear they all represent a different category.
+          </li>
+          <ul>
+            <li>
+              Attribute: like the color channel, the colormap represents four
+              different groups of people based on income, a categorical
+              attribute. This is a good choice because it makes the different
+              groups very clear. We can easily discern people of different
+              segments and their spending habits by looking at order size.
+            </li>
+          </ul>
         </ul>
       </div>
     </div>
@@ -183,7 +281,13 @@
         <li>https://www.w3schools.com/cssref/sel_hover.php</li>
         <li>https://css-tricks.com/snippets/css/a-guide-to-flexbox/</li>
         <li>https://css-tricks.com/dont-overthink-flexbox-grids/</li>
+        <li>
+          https://stackoverflow.com/questions/2173229/how-do-i-write-a-rgb-color-value-in-javascript
+        </li>
+        <li>https://www.w3schools.com/js/js_random.asp</li>
       </ul>
     </div>
+
+    <script src="script.js"></script>
   </body>
 </html>

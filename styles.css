@@ -23,3 +23,17 @@ body {
 .flex-grid-halves .col {
   width: 50%;
 }
+
+button {
+  background-color: hotpink;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  margin: 10px 0px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  align-items: center;
+}
